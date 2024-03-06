@@ -312,6 +312,7 @@ PUBLIC_STATS = '/api/v5/copytrading/public-stats'
 PUBLIC_PRE_CURR = '/api/v5/copytrading/public-preference-currency'
 PUBLIC_CURR_SUBPOS = '/api/v5/copytrading/public-current-subpositions'
 PUBLIC_SUBPOS_HIS = '/api/v5/copytrading/public-subpositions-history'
+GET_EXISTING_POSITIONS = '/priapi/v5/ecotrade/public/position-summary'
 
 
 # recurring
