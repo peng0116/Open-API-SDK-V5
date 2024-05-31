@@ -90,14 +90,18 @@ class TradeAPI(Client):
                          callbackRatio='',callbackSpread='',activePx='',tag='',triggerPxType='',
                          algoClOrdId='',quickMgnType='',closeFraction='', attachAlgoClOrdId=''):
         params = {'instId': instId, 'tdMode': tdMode, 'side': side, 'ordType': ordType, 'sz': sz, 'ccy': ccy,
-                  'posSide': posSide, 'reduceOnly': reduceOnly, 'tpTriggerPx': tpTriggerPx, 'tpOrdPx': tpOrdPx,
-                  'slTriggerPx': slTriggerPx, 'slOrdPx': slOrdPx, 'triggerPx': triggerPx, 'orderPx': orderPx,
-                  'tgtCcy': tgtCcy, 'pxVar': pxVar, 'szLimit': szLimit, 'pxLimit': pxLimit,
-                  'timeInterval': timeInterval, 'cxlOnClosePos': cxlOnClosePos,
-                  'pxSpread': pxSpread, 'tpTriggerPxType': tpTriggerPxType, 'slTriggerPxType': slTriggerPxType,
+                  'posSide': posSide, 'reduceOnly': reduceOnly, 'tgtCcy': tgtCcy, 'pxVar': pxVar, 'szLimit': szLimit,
+                  'pxLimit': pxLimit,'tag':tag,'pxSpread': pxSpread,
+                  'timeInterval': timeInterval, 'triggerPx': triggerPx, 'orderPx': orderPx,
+                  'slTriggerPx': slTriggerPx, 'slOrdPx': slOrdPx,
+                  'cxlOnClosePos': cxlOnClosePos, 'closeFraction': closeFraction,
+                  'attachAlgoOrds': [{'tpTriggerPx': tpTriggerPx, 'tpOrdPx': tpOrdPx,
+                  'slTriggerPx': slTriggerPx, 'slOrdPx': slOrdPx,
+                   'cxlOnClosePos': cxlOnClosePos,
+                  'tpTriggerPxType': tpTriggerPxType, 'slTriggerPxType': slTriggerPxType,
                   'callbackRatio' : callbackRatio, 'callbackSpread':callbackSpread,'activePx':activePx,
-                  'tag':tag,'triggerPxType':triggerPxType,'algoClOrdId':algoClOrdId,'quickMgnType':quickMgnType,
-                  'closeFraction':closeFraction, 'attachAlgoClOrdId':attachAlgoClOrdId}
+                  'triggerPxType':triggerPxType,'algoClOrdId':algoClOrdId,'quickMgnType':quickMgnType,
+                  'attachAlgoClOrdId':attachAlgoClOrdId}]}
         return self._request_with_params(POST, PLACE_ALGO_ORDER, params)
 
     # Cancel Algo Order

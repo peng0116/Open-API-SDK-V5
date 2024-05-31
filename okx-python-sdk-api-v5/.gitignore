@@ -1,9 +1,8 @@
-build/
-dist/
-python_okx.egg-info/
-*.DS_Store
-**/__pycache__
-**/**/__pycache__
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
 
 ### STS ###
 .apt_generated
@@ -19,6 +18,7 @@ python_okx.egg-info/
 *.iws
 *.iml
 *.ipr
+.history
 
 ### NetBeans ###
 /nbproject/private/
@@ -32,4 +32,5 @@ build/
 
 ### VS Code ###
 .vscode/
-id_rsa*
+
+**/application-devlc.properties
